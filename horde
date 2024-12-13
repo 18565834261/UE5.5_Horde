@@ -1,4 +1,5 @@
-RUN docker login ghcr.io -u 18565834261 --wjk19981017-stdin
+export CR_PAT="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"
+echo $CR_PAT | docker login ghcr.io -u 18565834261 --password-stdin
 # 使用 Unreal Engine 的 Horde Server 镜像
 FROM ghcr.io/epicgames/horde-server:5.5
 
