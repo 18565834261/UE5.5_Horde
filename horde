@@ -1,5 +1,5 @@
 # 使用 Unreal Engine 的 Horde Server 镜像
-FROM ghcr.io/epicgames/horde-server:latest
+FROM ghcr.io/epicgames/horde-server:5.5
 
 # 设置环境变量
 ENV Horde__HttpPort=13340
