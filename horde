@@ -1,0 +1,15 @@
+# 使用 Unreal Engine 的 Horde Server 镜像
+FROM ghcr.io/epicgames/horde-server:latest
+
+# 设置环境变量
+ENV Horde__HttpPort=13340
+ENV Horde__Http2Port=13342
+ENV Horde__RedisConnectionConfig=redis:30002
+ENV Horde__DatabaseConnectionString=mongodb://horde:dbPass123@mongodb:27017/Horde?authSource=admin
+
+# 映射端口
+EXPOSE 13340
+EXPOSE 13342
+
+# 创建数据卷
+VOLUME /app/Data
