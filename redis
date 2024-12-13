@@ -1,0 +1,11 @@
+# 使用官方 Redis 镜像
+FROM redis:6.2-alpine
+
+# 映射端口
+EXPOSE 30002
+
+# 配置 Redis
+CMD ["redis-server", "--save", "60", "1", "--port", "30002", "--loglevel", "warning"]
+
+# 创建数据卷
+VOLUME /data
