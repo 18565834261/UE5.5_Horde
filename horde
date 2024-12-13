@@ -1,3 +1,4 @@
+RUN docker login ghcr.io -u 18565834261 --wjk19981017-stdin
 # 使用 Unreal Engine 的 Horde Server 镜像
 FROM ghcr.io/epicgames/horde-server:5.5
 
