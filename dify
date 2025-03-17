@@ -1,0 +1,72 @@
+#dify的api镜像
+FROM langgenius/dify-api:1.0.1
+
+#dify的web镜像
+FROM langgenius/dify-web:1.0.1
+
+#数据库
+FROM postgres:15-alpine
+
+#Redis数据库缓存
+FROM redis:6-alpine
+
+#sandbox
+FROM langgenius/dify-sandbox:0.2.10
+
+#dify插件
+FROM langgenius/dify-plugin-daemon:0.0.4-local
+
+#ubuntu
+FROM ubuntu/squid:latest
+
+#机器人
+FROM certbot/certbot
+
+#nginx
+FROM nginx:latest
+
+#weaviate
+FROM semitechnologies/weaviate:1.19.0
+
+#qdrant
+FROM langgenius/qdrant:v1.7.3
+
+#pgvector
+FROM pgvector/pgvector:pg16
+
+#pgvecto-rs
+FROM tensorchord/pgvecto-rs:pg16-v0.3.0
+
+#谷歌
+FROM ghcr.io/chroma-core/chroma:0.5.20
+
+#向量数据库
+FROM quay.io/oceanbase/oceanbase-ce:4.3.3.0-100000142024101215
+
+#数据库
+FROM container-registry.oracle.com/database/free:latest
+
+#ETCD
+FROM quay.io/coreos/etcd:v3.5.5
+
+#MINIO
+FROM minio/minio:RELEASE.2023-03-20T20-16-18Z
+
+#DB
+FROM milvusdb/milvus:v2.5.0-beta
+
+#OPENSEARCH
+FROM opensearchproject/opensearch:latest
+
+#MYSCALE
+FROM myscale/myscaledb:1.6.4
+
+#ELASTIC
+FROM docker.elastic.co/elasticsearch/elasticsearch:8.14.3
+
+#KIBANA
+FROM docker.elastic.co/kibana/kibana:8.14.3
+
+#UNSTRUCTURED
+FROM downloads.unstructured.io/unstructured-io/unstructured-api:latest
+
